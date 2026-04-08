@@ -96,7 +96,7 @@ df = get_lags_and_rollings(col_name, df)
 df
 
 
-# ### Лаги цен
+# ### Лаги скидок
 
 # In[6]:
 
@@ -107,7 +107,7 @@ df = get_lags_and_rollings(col_name, df)
 df
 
 
-# ### Лаги скидок
+# ### Лаги цен
 
 # In[7]:
 
