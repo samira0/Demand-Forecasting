@@ -44,8 +44,6 @@ df['Date'] = pd.to_datetime(df['Date'])
 
 # In[5]:
 
-
-# Датасет вроде уже отсортирован по дате, но на всякий случай отсортируем ещё раз с учетом Store ID и Product ID
 df = df.sort_values(['Date', 'Store ID', 'Product ID'], ignore_index=True)
 df 
 
@@ -71,15 +69,9 @@ diffs
 
 # Временная сетка регулярна: шаг равен 1 дню
 
-# ### Агрегация до дневного уровня
-
-# Добавим при необходимости
-
 # In[8]:
 
-
-# # Не совсем понятно для чего и, следовательно, как. Поэтому оставлен шаблон
-# # Можно изменять функции агрегации для столбцов
+# # Изменения функции агрегации для столбцов
 # daily_agg = df.groupby('Date').agg({
 #     'Units Sold': 'sum',
 #     'Units Ordered': 'sum',
@@ -100,8 +92,6 @@ diffs
 
 # In[9]:
 
-
-# Нет деталей, поэтому реализовано самое очевидное
 df_panel = df.set_index(['Store ID', 'Product ID', 'Date']).sort_index()['Units Sold']
 df_panel
 
