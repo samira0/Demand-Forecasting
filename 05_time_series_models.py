@@ -220,7 +220,7 @@ auto_arima_kwargs = dict(
     # random_state=random_state, раскомментировать, если поставим random=True
     n_fits=20,
     n_jobs=-1,
-    scoring='mse', # можно поставить 'mae'
+    scoring='mse',
 )
 
 
@@ -239,7 +239,7 @@ auto_sarima_kwargs = dict(
     # random_state=random_state, раскомментировать, если поставим random=True
     n_fits=20,
     n_jobs=-1,
-    scoring='mse', # можно поставить 'mae'
+    scoring='mse',
 )
 
 
